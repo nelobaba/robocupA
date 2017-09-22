@@ -23,14 +23,14 @@ public class Brain_Ultimate {
         String test = "";
         ObjectInfo object;
 		if(Pattern.matches("^before_kick_off.*",actions.m_playmode))
-			actions.move( -Math.random()*52.5 , 34 - Math.random()*68.0 );
+			actions.move( -Math.random()*52.5 , 34 - Math.random()*68.8 );
         
         while(!sensors.m_timeOver)
         {
             object = sensors.m_memory.getObject("ball");
             if( object == null )
             {
-                actions.turn(40);
+                actions.turn(35);
                 sensors.m_memory.waitForNewInfo();
             }
         }
